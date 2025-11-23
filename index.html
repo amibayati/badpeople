@@ -12,8 +12,8 @@
             font-family: 'Inter', sans-serif;
         }
         
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .dark-gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
         }
         
         .card-hover {
@@ -21,180 +21,149 @@
         }
         
         .card-hover:hover {
-            transform: translateY(-8px);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900">
 
     <!-- Header -->
-    <div class="gradient-bg text-white py-16 px-4">
+    <div class="dark-gradient-bg text-gray-200 py-12 px-4">
         <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4">Profile Directory</h1>
-            <p class="text-xl opacity-90">Search and discover amazing people</p>
+            <h1 class="text-4xl font-bold mb-3 text-gray-100">لیست افراد</h1>
+            <p class="text-lg opacity-70">جستجو و مشاهده اطلاعات</p>
         </div>
     </div>
 
     <!-- Main Container -->
-    <div class="max-w-7xl mx-auto px-4 -mt-8">
+    <div class="max-w-6xl mx-auto px-4 -mt-6">
         
         <!-- Search Bar -->
-        <div class="mb-12">
-            <div class="relative max-w-2xl mx-auto">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-5 pointer-events-none">
-                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="mb-10">
+            <div class="relative max-w-xl mx-auto">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
                 <input type="text" id="searchInput" 
-                    class="w-full pl-14 pr-6 py-5 text-lg rounded-2xl shadow-xl border-2 border-transparent focus:border-purple-500 focus:outline-none transition-all bg-white" 
+                    class="w-full pl-12 pr-5 py-3 text-base rounded-lg shadow-lg border border-gray-700 focus:border-gray-600 focus:outline-none transition-all bg-gray-800 text-gray-200 placeholder-gray-500" 
                     placeholder="جستجو بر اساس نام...">
             </div>
         </div>
 
         <!-- Profile Grid -->
-        <div id="profileGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pb-16">
+        <div id="profileGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 pb-16">
             
             <!-- Card 1 -->
-            <div class="profile-card card-hover bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="relative h-40 gradient-bg"></div>
-                <div class="relative px-6 pb-6">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        <img src="https://i.pravatar.cc/150?img=1" alt="Profile" class="profile-image w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+            <div class="profile-card card-hover bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700">
+                <div class="relative h-24 bg-gray-700"></div>
+                <div class="relative px-3 pb-3">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="Profile" class="profile-image w-20 h-20 rounded-full border-2 border-gray-800 shadow-lg object-cover">
                     </div>
-                    <div class="pt-20 text-center">
-                        <h3 class="profile-name text-2xl font-bold text-gray-800 mb-2">علی محمدی</h3>
-                        <p class="text-gray-500 text-sm mb-4">توسعه‌دهنده فول‌استک</p>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-4 py-1.5 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">React</span>
-                            <span class="px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Node.js</span>
-                        </div>
+                    <div class="pt-12 text-center">
+                        <h3 class="profile-name text-base font-semibold text-gray-200 mb-1">علی محمدی</h3>
+                        <p class="text-gray-500 text-xs">توسعه‌دهنده</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="profile-card card-hover bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="relative h-40 bg-gradient-to-br from-pink-500 to-rose-500"></div>
-                <div class="relative px-6 pb-6">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        <img src="https://i.pravatar.cc/150?img=5" alt="Profile" class="profile-image w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+            <div class="profile-card card-hover bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700">
+                <div class="relative h-24 bg-gray-700"></div>
+                <div class="relative px-3 pb-3">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="Profile" class="profile-image w-20 h-20 rounded-full border-2 border-gray-800 shadow-lg object-cover">
                     </div>
-                    <div class="pt-20 text-center">
-                        <h3 class="profile-name text-2xl font-bold text-gray-800 mb-2">سارا احمدی</h3>
-                        <p class="text-gray-500 text-sm mb-4">طراح UI/UX</p>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-4 py-1.5 bg-pink-100 text-pink-700 text-xs font-medium rounded-full">Figma</span>
-                            <span class="px-4 py-1.5 bg-rose-100 text-rose-700 text-xs font-medium rounded-full">Design</span>
-                        </div>
+                    <div class="pt-12 text-center">
+                        <h3 class="profile-name text-base font-semibold text-gray-200 mb-1">سارا احمدی</h3>
+                        <p class="text-gray-500 text-xs">طراح</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="profile-card card-hover bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="relative h-40 bg-gradient-to-br from-green-500 to-emerald-500"></div>
-                <div class="relative px-6 pb-6">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        <img src="https://i.pravatar.cc/150?img=12" alt="Profile" class="profile-image w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+            <div class="profile-card card-hover bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700">
+                <div class="relative h-24 bg-gray-700"></div>
+                <div class="relative px-3 pb-3">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="Profile" class="profile-image w-20 h-20 rounded-full border-2 border-gray-800 shadow-lg object-cover">
                     </div>
-                    <div class="pt-20 text-center">
-                        <h3 class="profile-name text-2xl font-bold text-gray-800 mb-2">رضا کریمی</h3>
-                        <p class="text-gray-500 text-sm mb-4">مدیر پروژه</p>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-4 py-1.5 bg-green-100 text-green-700 text-xs font-medium rounded-full">Agile</span>
-                            <span class="px-4 py-1.5 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Scrum</span>
-                        </div>
+                    <div class="pt-12 text-center">
+                        <h3 class="profile-name text-base font-semibold text-gray-200 mb-1">رضا کریمی</h3>
+                        <p class="text-gray-500 text-xs">مدیر پروژه</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="profile-card card-hover bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="relative h-40 bg-gradient-to-br from-yellow-500 to-orange-500"></div>
-                <div class="relative px-6 pb-6">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        <img src="https://i.pravatar.cc/150?img=9" alt="Profile" class="profile-image w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+            <div class="profile-card card-hover bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700">
+                <div class="relative h-24 bg-gray-700"></div>
+                <div class="relative px-3 pb-3">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="https://i.pravatar.cc/100?img=9" alt="Profile" class="profile-image w-20 h-20 rounded-full border-2 border-gray-800 shadow-lg object-cover">
                     </div>
-                    <div class="pt-20 text-center">
-                        <h3 class="profile-name text-2xl font-bold text-gray-800 mb-2">مریم حسینی</h3>
-                        <p class="text-gray-500 text-sm mb-4">تحلیلگر داده</p>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-4 py-1.5 bg-yellow-100 text-yellow-700 text-xs font-medium rounded-full">Python</span>
-                            <span class="px-4 py-1.5 bg-orange-100 text-orange-700 text-xs font-medium rounded-full">Data</span>
-                        </div>
+                    <div class="pt-12 text-center">
+                        <h3 class="profile-name text-base font-semibold text-gray-200 mb-1">مریم حسینی</h3>
+                        <p class="text-gray-500 text-xs">تحلیلگر</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 5 -->
-            <div class="profile-card card-hover bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="relative h-40 bg-gradient-to-br from-indigo-500 to-purple-500"></div>
-                <div class="relative px-6 pb-6">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        <img src="https://i.pravatar.cc/150?img=13" alt="Profile" class="profile-image w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+            <div class="profile-card card-hover bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700">
+                <div class="relative h-24 bg-gray-700"></div>
+                <div class="relative px-3 pb-3">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="https://i.pravatar.cc/100?img=13" alt="Profile" class="profile-image w-20 h-20 rounded-full border-2 border-gray-800 shadow-lg object-cover">
                     </div>
-                    <div class="pt-20 text-center">
-                        <h3 class="profile-name text-2xl font-bold text-gray-800 mb-2">امیر رضایی</h3>
-                        <p class="text-gray-500 text-sm mb-4">مهندس نرم‌افزار</p>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-4 py-1.5 bg-indigo-100 text-indigo-700 text-xs font-medium rounded-full">Java</span>
-                            <span class="px-4 py-1.5 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Spring</span>
-                        </div>
+                    <div class="pt-12 text-center">
+                        <h3 class="profile-name text-base font-semibold text-gray-200 mb-1">امیر رضایی</h3>
+                        <p class="text-gray-500 text-xs">مهندس</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 6 -->
-            <div class="profile-card card-hover bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="relative h-40 bg-gradient-to-br from-cyan-500 to-blue-500"></div>
-                <div class="relative px-6 pb-6">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        <img src="https://i.pravatar.cc/150?img=10" alt="Profile" class="profile-image w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+            <div class="profile-card card-hover bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700">
+                <div class="relative h-24 bg-gray-700"></div>
+                <div class="relative px-3 pb-3">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="https://i.pravatar.cc/100?img=10" alt="Profile" class="profile-image w-20 h-20 rounded-full border-2 border-gray-800 shadow-lg object-cover">
                     </div>
-                    <div class="pt-20 text-center">
-                        <h3 class="profile-name text-2xl font-bold text-gray-800 mb-2">فاطمه نوری</h3>
-                        <p class="text-gray-500 text-sm mb-4">بازاریاب دیجیتال</p>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-4 py-1.5 bg-cyan-100 text-cyan-700 text-xs font-medium rounded-full">SEO</span>
-                            <span class="px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Marketing</span>
-                        </div>
+                    <div class="pt-12 text-center">
+                        <h3 class="profile-name text-base font-semibold text-gray-200 mb-1">فاطمه نوری</h3>
+                        <p class="text-gray-500 text-xs">بازاریاب</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 7 -->
-            <div class="profile-card card-hover bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="relative h-40 bg-gradient-to-br from-red-500 to-pink-500"></div>
-                <div class="relative px-6 pb-6">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        <img src="https://i.pravatar.cc/150?img=14" alt="Profile" class="profile-image w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+            <div class="profile-card card-hover bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700">
+                <div class="relative h-24 bg-gray-700"></div>
+                <div class="relative px-3 pb-3">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="https://i.pravatar.cc/100?img=14" alt="Profile" class="profile-image w-20 h-20 rounded-full border-2 border-gray-800 shadow-lg object-cover">
                     </div>
-                    <div class="pt-20 text-center">
-                        <h3 class="profile-name text-2xl font-bold text-gray-800 mb-2">حسین جعفری</h3>
-                        <p class="text-gray-500 text-sm mb-4">مدیر ارشد فناوری</p>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-4 py-1.5 bg-red-100 text-red-700 text-xs font-medium rounded-full">Leadership</span>
-                            <span class="px-4 py-1.5 bg-pink-100 text-pink-700 text-xs font-medium rounded-full">Strategy</span>
-                        </div>
+                    <div class="pt-12 text-center">
+                        <h3 class="profile-name text-base font-semibold text-gray-200 mb-1">حسین جعفری</h3>
+                        <p class="text-gray-500 text-xs">مدیر</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 8 -->
-            <div class="profile-card card-hover bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="relative h-40 bg-gradient-to-br from-teal-500 to-green-500"></div>
-                <div class="relative px-6 pb-6">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        <img src="https://i.pravatar.cc/150?img=16" alt="Profile" class="profile-image w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover">
+            <div class="profile-card card-hover bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700">
+                <div class="relative h-24 bg-gray-700"></div>
+                <div class="relative px-3 pb-3">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="https://i.pravatar.cc/100?img=16" alt="Profile" class="profile-image w-20 h-20 rounded-full border-2 border-gray-800 shadow-lg object-cover">
                     </div>
-                    <div class="pt-20 text-center">
-                        <h3 class="profile-name text-2xl font-bold text-gray-800 mb-2">زهرا مرادی</h3>
-                        <p class="text-gray-500 text-sm mb-4">طراح گرافیک</p>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-4 py-1.5 bg-teal-100 text-teal-700 text-xs font-medium rounded-full">Photoshop</span>
-                            <span class="px-4 py-1.5 bg-green-100 text-green-700 text-xs font-medium rounded-full">Illustrator</span>
-                        </div>
+                    <div class="pt-12 text-center">
+                        <h3 class="profile-name text-base font-semibold text-gray-200 mb-1">زهرا مرادی</h3>
+                        <p class="text-gray-500 text-xs">طراح</p>
                     </div>
                 </div>
             </div>
@@ -203,10 +172,10 @@
 
         <!-- No Results Message -->
         <div id="noResults" class="hidden text-center py-16">
-            <svg class="w-24 h-24 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-20 h-20 mx-auto text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <p class="text-gray-500 text-xl">هیچ پروفایلی یافت نشد</p>
+            <p class="text-gray-500 text-lg">هیچ پروفایلی یافت نشد</p>
         </div>
 
     </div>
